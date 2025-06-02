@@ -7,7 +7,7 @@
     <style>
         @page {
             size: A4;
-            margin: 0.5in;
+            margin: 0.75in;
         }
         
         * {
@@ -17,52 +17,52 @@
         }
         
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            line-height: 1.3;
-            color: #2d3748;
-            font-size: 10.5px;
+            font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+            line-height: 1.2;
+            color: #333;
+            font-size: 11px;
             background: white;
         }
         
         .container {
             max-width: 8.5in;
             margin: 0 auto;
-            padding: 0.3in;
+            padding: 0.5in;
         }
         
         .header {
             text-align: center;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #3182ce;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
         }
         
         .name {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
-            color: #2b6cb0;
+            color: #2c3e50;
             margin-bottom: 4px;
-            letter-spacing: 0.5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.1;
         }
         
         .role {
-            font-size: 16px;
-            color: #4a5568;
-            font-weight: 500;
+            font-size: 13px;
+            color: #7f8c8d;
+            font-weight: 400;
             margin-bottom: 8px;
+            line-height: 1.1;
         }
         
         .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
             font-size: 10px;
-            color: #4a5568;
+            color: #7f8c8d;
+            line-height: 1.2;
         }
         
         .contact-info a {
-            color: #3182ce;
+            color: #3498db;
             text-decoration: none;
         }
         
@@ -71,85 +71,77 @@
         }
         
         .section {
-            margin-bottom: 14px;
+            margin-bottom: 18px;
         }
         
         .section-title {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
-            color: #2b6cb0;
-            margin-bottom: 6px;
+            color: #2c3e50;
+            margin-bottom: 8px;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            border-left: 4px solid #3182ce;
-            padding-left: 10px;
-            background: linear-gradient(90deg, #ebf8ff 0%, transparent 100%);
-            padding-top: 4px;
-            padding-bottom: 4px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 3px;
         }
         
         .summary {
             text-align: justify;
-            line-height: 1.4;
-            margin-bottom: 4px;
+            line-height: 1.3;
+            color: #555;
         }
         
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-bottom: 4px;
+        .skills-content {
+            line-height: 1.3;
+            color: #555;
         }
         
         .skill-category {
-            margin-bottom: 3px;
+            margin-bottom: 5px;
         }
         
         .skill-label {
             font-weight: 600;
-            color: #2d3748;
-            display: inline-block;
-            min-width: 85px;
+            color: #2c3e50;
+            display: inline;
         }
         
         .skill-value {
-            color: #4a5568;
+            color: #555;
+            display: inline;
         }
         
         .project {
-            margin-bottom: 12px;
-            padding: 8px;
-            border-left: 3px solid #e2e8f0;
-            background: #f8fafc;
+            margin-bottom: 15px;
+            page-break-inside: avoid;
         }
         
         .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 4px;
-            flex-wrap: wrap;
+            margin-bottom: 5px;
         }
         
         .project-title {
             font-weight: 700;
-            color: #2d3748;
-            font-size: 11.5px;
+            color: #2c3e50;
+            font-size: 12px;
+            display: inline;
         }
         
         .project-date {
-            color: #718096;
-            font-size: 9.5px;
+            color: #7f8c8d;
+            font-size: 10px;
+            float: right;
             font-style: italic;
         }
         
         .project-links {
-            margin-bottom: 6px;
-            font-size: 9.5px;
+            margin-bottom: 5px;
+            font-size: 10px;
+            color: #7f8c8d;
         }
         
         .project-links a {
-            color: #3182ce;
+            color: #3498db;
             text-decoration: none;
             margin-right: 15px;
         }
@@ -161,27 +153,29 @@
         .achievements {
             list-style: none;
             padding-left: 0;
+            margin-left: 15px;
         }
         
         .achievements li {
             margin-bottom: 2px;
-            padding-left: 12px;
+            padding-left: 10px;
             position: relative;
-            line-height: 1.35;
+            line-height: 1.3;
+            color: #555;
         }
         
         .achievements li::before {
-            content: "▸";
-            color: #3182ce;
+            content: "•";
+            color: #3498db;
             font-weight: bold;
             position: absolute;
             left: 0;
         }
         
-        .education-section {
+        .education-content {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
+            gap: 30px;
         }
         
         .education-item {
@@ -190,157 +184,176 @@
         
         .education-title {
             font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 3px;
-            font-size: 10.5px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 11px;
         }
         
         .education-details {
-            color: #4a5568;
+            color: #555;
             line-height: 1.3;
+            font-size: 10px;
         }
         
         .highlight {
-            color: #3182ce;
+            color: #3498db;
             font-weight: 600;
         }
         
-        @media print {
-            body { 
-                font-size: 10px; 
-            }
-            .container { 
-                padding: 0.2in; 
-            }
-            .section { 
-                margin-bottom: 12px; 
-            }
-            .project { 
-                margin-bottom: 10px; 
-            }
+        .strong-highlight {
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="name">SHOBHIT SHARMA</h1>
+            <h1 class="name">Shobhit Sharma</h1>
             <div class="role">Frontend Developer</div>
             <div class="contact-info">
-                <span><a href=""tel:+917851864873"">📱My Phone num → +91-7851864873</a></span>
-                <span>✉ <a href="mailto:shobhitgs2011@gmail.com">My Email → shobhitgs2011@gmail.com</a></span>
-                <span><a href="https://g.co/kgs/DgCcptD">📍My Location → Kota, India</a></span>
-                <span><a href="https://github.com/shobhitt7">My GitHub Link → https://github.com/shobhitt7 </a></span>
-                <span><a href="https://www.linkedin.com/in/shobhit-sharma-59b230303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">My LinkedIn Link → https://www.linkedin.com/in/shobhit-sharma</a></span>
+                <a href="tel:+917851864873">+91-7851864873</a> • 
+                <a href="mailto:shobhitgs2011@gmail.com">shobhitgs2011@gmail.com</a><br>
+                <a href="https://g.co/kgs/DgCcptD">Kota, India</a> • 
+                <a href="https://github.com/shobhitt7">github.com/shobhitt7</a> • 
+                <a href="https://www.linkedin.com/in/shobhit-sharma-59b230303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn Profile</a>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">💼 Professional Summary</h2>
+            <h2 class="section-title">Professional Summary</h2>
             <p class="summary">
-                Results-driven Frontend Developer with experience in building responsive, high-performance web applications using React, JavaScript, HTML, and CSS. Adept at designing intuitive user interfaces, optimizing performance through code splitting and lazy loading, and managing state using Context API. Passionate about clean, scalable code and creating seamless user experiences across devices.
+                Results-driven Frontend Developer with experience in building <span class="highlight">responsive, high-performance web applications</span> using <span class="strong-highlight">React, JavaScript, HTML, and CSS</span>. Adept at designing intuitive user interfaces, optimizing performance through <span class="highlight">code splitting and lazy loading</span>, and managing state using <span class="strong-highlight">Context API</span>. Passionate about clean, scalable code and creating seamless user experiences across devices.
             </p>
         </div>
 
         <div class="section">
-            <h2 class="section-title">🔧 Technical Skills</h2>
-            <div class="skills-grid">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-content">
                 <div class="skill-category">
                     <span class="skill-label">Languages:</span>
-                    <span class="skill-value">JavaScript (ES6+), HTML, CSS</span>
+                    <span class="skill-value"><span class="highlight">JavaScript (ES6+)</span>, HTML, CSS</span>
                 </div>
                 <div class="skill-category">
                     <span class="skill-label">Frameworks & Libraries:</span>
-                    <span class="skill-value">React (Hooks, Context API, Custom Hooks), Material UI, Tailwind CSS, Styled Components</span>
+                    <span class="skill-value"><span class="strong-highlight">React</span> (Hooks, Context API, Custom Hooks), Material UI, <span class="highlight">Tailwind CSS</span>, Styled Components</span>
                 </div>
                 <div class="skill-category">
                     <span class="skill-label">Design & Layout:</span>
-                    <span class="skill-value">Responsive Design, Flexbox, CSS Grid, Media Queries, Semantic HTML</span>
+                    <span class="skill-value"><span class="highlight">Responsive Design</span>, Flexbox, CSS Grid, Media Queries, Semantic HTML</span>
                 </div>
                 <div class="skill-category">
                     <span class="skill-label">State & Performance:</span>
-                    <span class="skill-value">Context API, Local Storage, Code Splitting, Lazy Loading, Memoization</span>
+                    <span class="skill-value"><span class="strong-highlight">Context API</span>, Local Storage, <span class="highlight">Code Splitting, Lazy Loading</span>, Memoization</span>
                 </div>
                 <div class="skill-category">
                     <span class="skill-label">Tools & Workflow:</span>
-                    <span class="skill-value">Git, GitHub, Dynamic Routing, API Integration, Component Architecture</span>
+                    <span class="skill-value">Git, <span class="highlight">GitHub</span>, Dynamic Routing, API Integration, Component Architecture</span>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">🚀 Projects</h2>
+            <h2 class="section-title">Projects</h2>
             
             <div class="project">
-                <div class="project-header">
+                <div class="project-header clearfix">
                     <span class="project-title">VanSafari – Camper Van Rental App</span>
                     <span class="project-date">Feb 2025 – Apr 2025</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://vansafari.netlify.app">Check Live Demo</a>
-                    <a href="https://github.com/shobhitt7/VanSafari">Check GitHub Repository</a>
+                    <a href="https://vansafari.netlify.app">Live Demo</a>
+                    <a href="https://github.com/shobhitt7/VanSafari">GitHub Repository</a>
                 </div>
                 <ul class="achievements">
-                    <li>Built a full-featured SPA using React, allowing users to browse, filter, and host camper vans</li>
-                    <li>Achieved Lighthouse performance score of 82+ through lazy loading and code splitting</li>
-                    <li>Created a global state system using Context API to manage filters and sessions</li>
+                    <li>Built a <span class="strong-highlight">full-featured SPA</span> using React, allowing users to browse, filter, and host camper vans</li>
+                    <li>Achieved <span class="highlight">Lighthouse performance score of 82+</span> through lazy loading and code splitting</li>
+                    <li>Created a <span class="strong-highlight">global state system</span> using Context API to manage filters and sessions</li>
                     <li>Developed a host dashboard with van listings, income tracking, and customer reviews</li>
-                    <li>Designed responsive layouts using Flexbox and media queries for cross-device usability</li>
+                    <li>Designed <span class="highlight">responsive layouts</span> using Flexbox and media queries for cross-device usability</li>
                 </ul>
             </div>
 
             <div class="project">
-                <div class="project-header">
+                <div class="project-header clearfix">
                     <span class="project-title">Pizza Master – Food Ordering App</span>
                     <span class="project-date">Dec 2024 – Feb 2025</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://fastfoodordering.netlify.app/">Check Live Demo</a>
-                    <a href="https://github.com/shobhitt7/Restaurant-food-odering-app"> Check GitHub Repository</a>
+                    <a href="https://fastfoodordering.netlify.app/">Live Demo</a>
+                    <a href="https://github.com/shobhitt7/Restaurant-food-odering-app">GitHub Repository</a>
                 </div>
                 <ul class="achievements">
-                    <li>Created an interactive ordering interface using vanilla JavaScript, HTML, and CSS</li>
-                    <li>Implemented event delegation for efficient dynamic menu handling</li>
+                    <li>Created an <span class="highlight">interactive ordering interface</span> using vanilla JavaScript, HTML, and CSS</li>
+                    <li>Implemented <span class="strong-highlight">event delegation</span> for efficient dynamic menu handling</li>
                     <li>Added smooth scroll navigation across categories to improve UX flow</li>
-                    <li>Used Flexbox and media queries to ensure full responsiveness on all devices</li>
+                    <li>Used Flexbox and media queries to ensure <span class="highlight">full responsiveness</span> on all devices</li>
                 </ul>
             </div>
 
             <div class="project">
-                <div class="project-header">
+                <div class="project-header clearfix">
                     <span class="project-title">E-commerce UI Clone – Meesho</span>
                     <span class="project-date">Jan 2025 – Mar 2025</span>
                 </div>
                 <div class="project-links">
-                    <a href="http://meeshoclone14.netlify.app"> Check Live Demo</a>
-                    <a href="https://github.com/shobhitt7/meesho-clone">Check GitHub Repository</a>
+                    <a href="http://meeshoclone14.netlify.app">Live Demo</a>
+                    <a href="https://github.com/shobhitt7/meesho-clone">GitHub Repository</a>
                 </div>
                 <ul class="achievements">
-                    <li>Rebuilt Meesho’s home UI using HTML, CSS Grid, and Flexbox for performance and accuracy</li>
-                    <li>Used semantic HTML and CSS variables for accessibility and theming consistency</li>
-                    <li>Enhanced interactivity with hover effects and animations on product cards</li>
+                    <li>Rebuilt Meesho's home UI using <span class="highlight">HTML, CSS Grid, and Flexbox</span> for performance and accuracy</li>
+                    <li>Used <span class="strong-highlight">semantic HTML and CSS variables</span> for accessibility and theming consistency</li>
+                    <li>Enhanced interactivity with <span class="highlight">hover effects and animations</span> on product cards</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">🎓 Certifications & Education</h2>
-            <div class="education-section">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-content">
                 <div class="education-item">
-                    <div class="education-title">Certifications:</div>
+                    <div class="education-title">Certifications</div>
                     <div class="education-details">
-                        📜 Front-End Developer Career Path – Scrimba (2025)<br>
-                        📜 React.js Certification – Scrimba (2025)
+                        <span class="strong-highlight">Front-End Developer Career Path</span><br>
+                        <em>Scrimba • 2025</em><br><br>
+                        <span class="strong-highlight">React.js Certification</span><br>
+                        <em>Scrimba • 2025</em>
                     </div>
                 </div>
                 <div class="education-item">
-                    <div class="education-title">Education:</div>
+                    <div class="education-title">Education</div>
                     <div class="education-details">
-                        🎓 M.A. & B.A. in History<br>
-                        Kota University, India
+                        Master of Arts in History<br>
+                        <em>Kota University, India</em><br><br>
+                        Bachelor of Arts in History<br>
+                        <em>Kota University, India</em>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="section">
+            <h2 class="section-title">Volunteer Experience</h2>
+            <div class="project">
+                <div class="project-header clearfix">
+                    <span class="project-title">Volunteer</span>
+                    <span class="project-date">November 2024 – December 2024 (4 weeks)</span>
+                </div>
+                <div class="project-links">
+                    <span style="color: #555; font-style: italic;">Peepal Farm, Himachal Pradesh, India</span>
+                </div>
+                <ul class="achievements">
+                    <li>Assisted in daily care and feeding of injured animals, supporting the <span class="highlight">rehabilitation process</span></li>
+                    <li>Participated in <span class="highlight">community outreach programs</span> promoting compassion and sustainable living</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
+</html>
